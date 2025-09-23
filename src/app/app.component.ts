@@ -5,10 +5,9 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Diego Guzman';
+  title = 'Sebastian Gonzalez';
 
   duplicarNumero(valor: number): number {
     return valor * 2;
