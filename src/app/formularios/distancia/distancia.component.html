@@ -1,0 +1,21 @@
+<div>
+  <h3>Calcular distancia entre dos puntos</h3>
+  <form (ngSubmit)="calcularDistancia()">
+    <label>X1:</label>
+    <input type="number" [(ngModel)]="x1" name="x1"><br>
+
+    <label>Y1:</label>
+    <input type="number" [(ngModel)]="y1" name="y1"><br>
+
+    <label>X2:</label>
+    <input type="number" [(ngModel)]="x2" name="x2"><br>
+
+    <label>Y2:</label>
+    <input type="number" [(ngModel)]="y2" name="y2"><br><br>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+  <p>La distancia entre los dos puntos es: {{resultado}}</p>
+</div>
+
