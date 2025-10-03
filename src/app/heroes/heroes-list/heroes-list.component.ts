@@ -3,7 +3,6 @@ import { Iheroes } from '../iheroes';
 
 @Component({
   selector: 'app-heroes-list',
-  standalone: false,
   templateUrl: './heroes-list.component.html',
 })
 

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Diego Guzman';
+  title = 'SEBASTIAN GLEZ';
 
   duplicarNumero(valor: number): number {
     return valor * 2;

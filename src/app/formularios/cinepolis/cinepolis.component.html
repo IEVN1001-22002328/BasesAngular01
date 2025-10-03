@@ -1,0 +1,80 @@
+<div class="col-6">
+  <div class="mb-3">
+    <form>
+      <h3>BIENVENIDO A CINEPOLIS!</h3>
+
+      <div class="form-group pt-4">
+        <label for="name">NOMBRE</label>
+        <input
+          [(ngModel)]="name"
+          name="name"
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="INGRESE SU NOMBRE"
+        />
+      </div>
+
+      <div class="form-group pt-4">
+        <label for="cantp">CANTIDAD DE PERSONAS</label>
+        <input
+          [(ngModel)]="cantp"
+          name="cantp"
+          type="number"
+          class="form-control"
+          id="cantp"
+        />
+      </div>
+
+      <div class="form-group pt-4">
+        <label for="cant">BOLETOS</label>
+        <input
+          [(ngModel)]="cant"
+          name="cant"
+          type="number"
+          class="form-control"
+          id="cant"
+        />
+        <label for="cant">PRECIO POR BOLETO: $12.00 MXN</label>
+      </div>
+
+      <div class="form-group pt-4">
+        <label>TARJETA CINECO</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="tarjetaCineco"
+            id="tarjetaSi"
+            value="si"
+            [(ngModel)]="tarjetaCineco"
+          />
+          <label class="form-check-label" for="tarjetaSi">SI</label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="tarjetaCineco"
+            id="tarjetaNo"
+            value="no"
+            [(ngModel)]="tarjetaCineco"
+          />
+          <label class="form-check-label" for="tarjetaNo">NO</label>
+        </div>
+      </div>
+
+      <br />
+      <button (click)="calcular()" type="button" class="btn btn-primary">
+        PROCESAR
+      </button>
+    </form>
+  </div>
+  <div class="col-6 pt-4" *ngIf="mostrarResultados">
+    <h5>HOLA {{ name }}!</h5>
+    <h5>PERSONAS: {{ cantp }}</h5>
+    <h5>BOLETOS: {{ cant }}</h5>
+    <h5>TOTAL A PAGAR: ${{ resultado }} MXN</h5>
+  </div>
+</div>
